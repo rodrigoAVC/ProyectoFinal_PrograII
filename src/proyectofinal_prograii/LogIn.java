@@ -4,7 +4,11 @@
  */
 package proyectofinal_prograii;
 
+import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Arrays;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,6 +21,8 @@ public class LogIn extends javax.swing.JFrame {
      */
     public LogIn() {
         initComponents();
+        this.pack();
+        this.setLocationRelativeTo(null);
         this.setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -29,23 +35,156 @@ public class LogIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
+        jd_password = new javax.swing.JDialog();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        ftf_numCuenta = new javax.swing.JFormattedTextField();
+        tf_nombre = new javax.swing.JTextField();
+        ftf_correo = new javax.swing.JFormattedTextField();
+        pf_password = new javax.swing.JPasswordField();
+        pf_confirmation = new javax.swing.JPasswordField();
+        jLabel7 = new javax.swing.JLabel();
+        bt_guardar = new javax.swing.JButton();
+        jp_logIn = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         tf_nombreUsuario = new javax.swing.JTextField();
         pf_passwordUsuario = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        bt_next = new javax.swing.JButton();
+        jl_password = new javax.swing.JLabel();
+        jl_cuenta = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+
+        jd_password.setBackground(new java.awt.Color(78, 130, 230));
+        jd_password.setMaximumSize(new java.awt.Dimension(800, 350));
+        jd_password.setMinimumSize(new java.awt.Dimension(800, 350));
+        jd_password.setPreferredSize(new java.awt.Dimension(800, 300));
+        jd_password.setResizable(false);
+        jd_password.setSize(new java.awt.Dimension(800, 350));
+
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel2.setText("Ingrese su Número de Cuenta:");
+
+        jLabel3.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel3.setText("Ingrese Nombre Completo:");
+
+        jLabel4.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel4.setText("Ingrese Su Correo:");
+
+        jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel5.setText("Ingrese la nueva contraseña:");
+
+        jLabel6.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel6.setText("Confirmar contraseña:");
+
+        ftf_numCuenta.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ftf_numCuentaKeyPressed(evt);
+            }
+        });
+
+        tf_nombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tf_nombreKeyPressed(evt);
+            }
+        });
+
+        ftf_correo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ftf_correoKeyPressed(evt);
+            }
+        });
+
+        pf_password.setText("jPasswordField1");
+        pf_password.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                pf_passwordKeyPressed(evt);
+            }
+        });
+
+        pf_confirmation.setText("jPasswordField2");
+
+        jLabel7.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jLabel7.setText("Cambio de Contraseña");
+
+        bt_guardar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        bt_guardar.setText("Guardar");
+        bt_guardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_guardarMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_passwordLayout = new javax.swing.GroupLayout(jd_password.getContentPane());
+        jd_password.getContentPane().setLayout(jd_passwordLayout);
+        jd_passwordLayout.setHorizontalGroup(
+            jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_passwordLayout.createSequentialGroup()
+                .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bt_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jd_passwordLayout.createSequentialGroup()
+                            .addGap(233, 233, 233)
+                            .addComponent(jLabel7))
+                        .addGroup(jd_passwordLayout.createSequentialGroup()
+                            .addGap(30, 30, 30)
+                            .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel6)
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel5))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(ftf_numCuenta)
+                                .addComponent(tf_nombre)
+                                .addComponent(ftf_correo)
+                                .addComponent(pf_password)
+                                .addComponent(pf_confirmation, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+        jd_passwordLayout.setVerticalGroup(
+            jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_passwordLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(ftf_numCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(ftf_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(pf_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jd_passwordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(pf_confirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(bt_guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1280, 650));
-        setPreferredSize(new java.awt.Dimension(1280, 650));
+        setBackground(new java.awt.Color(237, 230, 230));
+        setMaximumSize(new java.awt.Dimension(800, 500));
+        setMinimumSize(new java.awt.Dimension(800, 500));
+        setPreferredSize(new java.awt.Dimension(800, 500));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(150, 216, 253));
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        jp_logIn.setBackground(new java.awt.Color(150, 216, 253));
+        jp_logIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -55,78 +194,78 @@ public class LogIn extends javax.swing.JFrame {
         tf_nombreUsuario.setText("Nombre de Usuario");
 
         pf_passwordUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        pf_passwordUsuario.setText("Contraseña");
+        pf_passwordUsuario.setText("Password");
 
-        jButton1.setBackground(new java.awt.Color(0, 87, 175));
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Siguiente");
-        jButton1.setAlignmentY(0.0F);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        bt_next.setBackground(new java.awt.Color(0, 87, 175));
+        bt_next.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        bt_next.setForeground(new java.awt.Color(0, 0, 0));
+        bt_next.setText("Siguiente");
+        bt_next.setAlignmentY(0.0F);
+        bt_next.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_next.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        bt_next.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                bt_nextMouseClicked(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("¿Olvidó su contraseña?");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jl_password.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jl_password.setForeground(new java.awt.Color(0, 0, 0));
+        jl_password.setText("¿Olvidó su contraseña?");
+        jl_password.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jl_password.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_passwordMouseClicked(evt);
+            }
+        });
 
-        jLabel3.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Crear Cuenta");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jl_cuenta.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jl_cuenta.setForeground(new java.awt.Color(0, 0, 0));
+        jl_cuenta.setText("Crear Cuenta");
+        jl_cuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(145, 145, 145)
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pf_passwordUsuario, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(tf_nombreUsuario))))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
-                        .addComponent(jLabel3)))
-                .addGap(42, 42, 42))
+        javax.swing.GroupLayout jp_logInLayout = new javax.swing.GroupLayout(jp_logIn);
+        jp_logIn.setLayout(jp_logInLayout);
+        jp_logInLayout.setHorizontalGroup(
+            jp_logInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_logInLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addGroup(jp_logInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_logInLayout.createSequentialGroup()
+                        .addGap(139, 139, 139)
+                        .addComponent(jLabel1))
+                    .addComponent(tf_nombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pf_passwordUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jp_logInLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jl_password)
+                        .addGap(167, 167, 167)
+                        .addComponent(jl_cuenta))
+                    .addGroup(jp_logInLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(bt_next, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+        jp_logInLayout.setVerticalGroup(
+            jp_logInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jp_logInLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(tf_nombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pf_passwordUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGroup(jp_logInLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jl_password)
+                    .addComponent(jl_cuenta))
+                .addGap(12, 12, 12)
+                .addComponent(bt_next, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, -1, -1));
+        getContentPane().add(jp_logIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 670, 300));
 
-        jPanel1.setBackground(new java.awt.Color(0, 87, 175));
+        jPanel1.setBackground(new java.awt.Color(57, 125, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -136,37 +275,87 @@ public class LogIn extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 150));
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1280, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1280, 500));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void bt_nextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_nextMouseClicked
         // TODO add your handling code here:
         for (Usuario usuario : usuarios) {
             if (usuario.getNombre().equals(tf_nombreUsuario.getText())) {
-                
+
             }
         }
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_bt_nextMouseClicked
+
+    private void jl_passwordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_passwordMouseClicked
+        // TODO add your handling code here:
+        abrir_ventana(jd_password);
+    }//GEN-LAST:event_jl_passwordMouseClicked
+
+    private void ftf_numCuentaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ftf_numCuentaKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == evt.VK_ENTER) {
+            tf_nombre.requestFocus();
+        }
+    }//GEN-LAST:event_ftf_numCuentaKeyPressed
+
+    private void tf_nombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_nombreKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == evt.VK_ENTER) {
+            ftf_correo.requestFocus();
+        }
+    }//GEN-LAST:event_tf_nombreKeyPressed
+
+    private void ftf_correoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ftf_correoKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == evt.VK_ENTER) {
+            pf_password.setText("");
+            pf_password.requestFocus();
+        }
+    }//GEN-LAST:event_ftf_correoKeyPressed
+
+    private void pf_passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pf_passwordKeyPressed
+        // TODO add your handling code here:
+        if (evt.getKeyCode() == evt.VK_ENTER) {
+            pf_confirmation.setText("");
+            pf_confirmation.requestFocus();
+        }
+    }//GEN-LAST:event_pf_passwordKeyPressed
+
+    private void bt_guardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_guardarMouseClicked
+        // TODO add your handling code here:
+        int index = 0;
+        boolean numCuenta = false;
+        for (Usuario usuario : usuarios) {
+            if (usuario.getNumCuenta() == Integer.parseInt(ftf_numCuenta.getText())) {
+                numCuenta = true;
+            } else {
+                index++;
+            }
+        }
+        if (numCuenta) {
+            if (usuarios.get(index).getNombre().equals(tf_nombre.getText())) {
+                if (usuarios.get(index).getCorreo().equals(ftf_correo.getText())) {
+                    if (Arrays.equals(pf_password.getPassword(), pf_confirmation.getPassword())) {
+                        usuarios.get(index)
+                    } else {
+                        JOptionPane.showMessageDialog(jd_password, "Las contraseñas no coinciden", "Error", 0);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(jd_password, "El correo ingresado no coincide", "Error", 0);
+                }
+            } else {
+                JOptionPane.showMessageDialog(jd_password, "El nombre '" + tf_nombre.getText() + "' no pertenece al numero de cuenta " + ftf_numCuenta.getText(), "Error", 0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(jd_password, "El numero de cuenta '" + ftf_numCuenta.getText() + "' no ha sido encontrado en el sistema", "Error", 0);
+        }
+    }//GEN-LAST:event_bt_guardarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -204,16 +393,35 @@ public class LogIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton bt_guardar;
+    private javax.swing.JButton bt_next;
+    private javax.swing.JFormattedTextField ftf_correo;
+    private javax.swing.JFormattedTextField ftf_numCuenta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JDialog jd_password;
+    private javax.swing.JLabel jl_cuenta;
+    private javax.swing.JLabel jl_password;
+    private javax.swing.JPanel jp_logIn;
+    private javax.swing.JPasswordField pf_confirmation;
+    private javax.swing.JPasswordField pf_password;
     private javax.swing.JPasswordField pf_passwordUsuario;
+    private javax.swing.JTextField tf_nombre;
     private javax.swing.JTextField tf_nombreUsuario;
     // End of variables declaration//GEN-END:variables
 
     ArrayList<Usuario> usuarios = new ArrayList();
+
+    private void abrir_ventana(JDialog ventana) {
+        ventana.setModal(true);
+        ventana.pack();
+        ventana.setLocationRelativeTo(this);
+        ventana.setVisible(true);
+    }
 }

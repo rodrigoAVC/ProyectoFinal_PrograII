@@ -5,17 +5,26 @@ package proyectofinal_prograii;
  * @author Rui
  */
 public class Usuario {
-    private String nombre, sexo;
+    private String nombre, sexo, correo;
     private int numCuenta, edad;
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String sexo, int numCuenta, int edad) {
+    public Usuario(String nombre, String sexo, String correo, int numCuenta, int edad) {
         this.nombre = nombre;
         this.sexo = sexo;
+        this.correo = correo;
         this.numCuenta = numCuenta;
         this.edad = edad;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     public String getNombre() {
